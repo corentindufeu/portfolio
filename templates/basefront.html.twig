@@ -1,0 +1,72 @@
+{% extends "base.html.twig" %}
+
+{% block title %}Portfolio-Corentin-Dufeu{% endblock %}
+{% block stylesheets %}
+    <link href="{{ asset('css/style.css') }}" rel="stylesheet" type="text/css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+{% endblock %}
+
+{% block top %}
+    <header>
+        <div id="header" class="w-100 justify-content-between">
+            <div id="titleHeader" class="h-100">
+                <h1>Corentin Dufeu</h1>
+            </div>
+            <nav class="h-100">
+                <ul class="w-100 h-100">
+                    <li class="headerButton position-relative">
+                        <a href="{{ path('accueil') }}">
+                            <span>
+                                <span>
+                                    <span data-attr-span="home">
+
+                                    </span>
+                                </span>
+                            </span>
+                        </a>
+                    </li>
+                    <li class="headerButton position-relative">
+                        <a href="{{ path('my_works') }}">
+                            <span>
+                                <span>
+                                    <span data-attr-span="my work">
+
+                                    </span>
+                                </span>
+                            </span>
+                        </a>
+                    </li>
+                    <li class="headerButton position-relative">
+                        <a href="{{ path('about_me') }}">
+                            <span>
+                                <span>
+                                    <span data-attr-span="about me">
+
+                                    </span>
+                                </span>
+                            </span>
+                        </a>
+                    </li>
+                    <li class="headerButton position-relative">
+                        <a href="{{ path('contact') }}">
+                            <span>
+                                <span>
+                                    <span data-attr-span="contact">
+
+                                    </span>
+                                </span>
+                            </span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+{% endblock %}
+{% block body %}{% endblock %}
+{% block footer %}
+    <footer>
+        <p>© 2021 Corentin Dufeu</p>
+    </footer>
+{% endblock %}
+{% block javascripts %}{% endblock %}

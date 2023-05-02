@@ -1,0 +1,29 @@
+{% extends "basefront.html.twig" %}
+
+{% block body %}
+    <main>
+        <div id="content">
+            <!--Texte de présentation-->
+            <div id="workText">
+                <h5>
+                    Dans le but d'apprendre à développer un projet dans un contexte réaliste d’entreprise, 
+                    la mission de l'atelier n°2 a été de développer un projet en autonomie. Ce projet est une 
+                    application développé en java.
+                    <br>
+                    Cette application doit permettre à un responsable de se connecter, et de gérer une liste 
+                    d'employées, ainsi que des absences qui leur sont associés (voir la vidéo ci-dessous), 
+                    en lien avec une base de données MySQL. Tout le projet est disponible sur github via le 
+                    lien ci-dessous.
+                    <br><br>
+                    Lien du dépot de l'application : https://github.com/coco3580/Atelier-2.git
+                    <br><br>
+                    <div id="video">
+                        <video controls>
+                            <source src= "{{ asset("Démonstration.mp4") }}" type="video/mp4">
+                        </video>
+                    </div>
+                </h5>
+            </div>
+        </div>
+    </main>
+{% endblock %}

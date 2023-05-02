@@ -1,0 +1,28 @@
+{% extends "basefront.html.twig" %}
+{% block body %}
+    <main>
+        <div id="content">
+            <!--Texte de présentation-->
+            <div id="personalText">
+                <h5>
+                    Je m’appelle Corentin Dufeu, je suis actuellement en fin de première année du Bachelor Switch IT, 
+                    à l’école de Campus Academy Rennes.
+                    <br><br>
+                    Depuis environ un an, j'étudie plusieurs langages de programmation telle que le PHP ou le Python.
+                    J'adore passer du temps à développer différents programmes, ce qui me permet de progresser plus 
+                    rapidement.
+                    <br><br>
+                    En plus de coder, j'aime passer du temps à jouer aux jeux vidéo, comme Red Dead Redemption 2 ou Assassin Screed Odyssey.
+                    Je réalise aussi du tennis de table depuis 10 ans, au club d'Argentré du Plessis.
+                    <br><br>
+                    Mon objectif, est de travailler en alternance dans un milieu professionnel, dans le but de progresser plus rapidement, et de devenir développeur à plein temps dans deux ans.
+                </h5>
+                <a href="CV.pdf" target="_BLANK">Accéder à mon CV</a>
+            </div>
+            <!--Photo CV-->
+            <div id="personalImg">
+                <img class="w-100" src="{{ asset("img/personal_image.png") }}">
+            </div>
+        </div>
+    </main>
+{% endblock %}
