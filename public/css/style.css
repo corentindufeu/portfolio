@@ -210,7 +210,7 @@ body{
     justify-content: space-evenly;
 }
 #contactGrid{
-    display: grid;
+    display: flex;
 	grid-template-columns: repeat(auto-fill, 300px);
 	grid-gap: 10px;
 	justify-content: center;
@@ -230,8 +230,15 @@ body{
     position: relative;
     transform: translateY(-50%);
     top: 50%;
+    user-select: none; /* Propriété standard */
 }
 .contactWay:hover p{
+    color: black;
+}
+.contactWay a{
+    color: white;
+}
+.contactWay a:hover{
     color: black;
 }
 
