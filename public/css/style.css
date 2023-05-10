@@ -1,253 +1,253 @@
 
 body{
-    background-color: #19c3d4 !important;
+    background-color: #333333 !important;
     font-family: NowAlt-Light !important;
 }
 #content{
-    width: 90%;
+    width: 100%;
     margin: auto;
     margin-top: 100px;
 }
 
 /* --- Header --- */
 
-#header{
-    position: fixed;
-    top: 0;
-    height: 60px;
-    display: flex;
-    flex-direction: row;
-    z-index: 1000;
-}
-#header:hover{
-    transition: 1000ms;
-    background: rgba(0, 0, 0, 0.05);
-}
-#header:not(:hover){
-    transition: 1000ms;
-    background: rgba(250, 250, 250, 0.8);
-}
+    #header{
+        position: fixed;
+        top: 0;
+        height: 60px;
+        display: flex;
+        flex-direction: row;
+        z-index: 1000;
+        background-color: rgba(245, 245, 245, 0.556);
+        box-shadow: rgba(245, 245, 245, 0.655) 0 5px 10px;
+    }
+    #header:hover{
+        transition: 1500ms;
+        background-color: #19c3d4;
+        box-shadow: none;
+    }
+    #header:not(:hover){
+        transition: 1500ms;
+        background-color: rgba(245, 245, 245, 0.556);
+        box-shadow: rgba(245, 245, 245, 0.655) 0 5px 10px;
+    }
 
-/*left*/
-#header > #titleHeader{
-    font-family: NowAlt-Light;
-    width: 400px;
-    text-align: center;
-    user-select: none;
-    position: relative;
-    transform: translateY(-50%);
-    top: 60%;
-}
+    /*left*/
+    #header > #titleHeader{
+        font-family: NowAlt-Light;
+        width: 400px;
+        text-align: center;
+        user-select: none;
+        position: relative;
+        transform: translateY(-50%);
+        top: 60%;
+        color: #ffa537;
+        text-shadow: #ffa5375a 1px 1px 10px;
+    }
 
-/*right*/
-#header > nav{
-    width: 800px;
-}
-#header > nav > ul{
-    list-style-type: none; 
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-evenly;
-}
-#header > nav li{
-    width: 100px;
-}
-#header > nav a{
-    text-decoration: none;
-    color: black;
-    font-size: 20px;
-    font-family: Roboto-Light;
-}
-.headerButton a{
-    text-align: center;
-    position: relative;
-    color: black;
-    width: 250px;
-    height: 50px;
-    font-size: 20px;
-    outline: none;
-}
-.headerButton a span{
-    display: block;
-    position: relative;
-    line-height: 50px;
-    height: 50px;
-    cursor: pointer;
-}
-.headerButton a > span:after{
-    content:'';
-    position: absolute;
-    top: 0;
-    width: 20px;
-    height: 0;
-    border: 1px solid crimson;
-    border-left: none;
-    border-bottom: none;
-    transition: height 0.15s ease-out, width 0.15s ease-out 0.15s;
-}
-.headerButton a:hover > span:after{
-    width: calc(50% - 1px);
-    height: calc(100% - 2px);
-    transition: width 0.15s ease-out, height 0.15s ease-out 0.15s;
-}
-.headerButton a > span:before{
-    content:'';
-    position: absolute;
-    right: 50%;
-    width: 20px;
-    height: 0;
-    border: 1px solid crimson;
-    border-right: none;
-    border-bottom: none;
-    transition: height 0.15s ease-out, width 0.15s ease-out 0.15s;
-}
-.headerButton a:hover > span:before{
-    width: calc(50% - 1px);
-    height: calc(100% - 2px);
-    transition: width 0.15s ease-out, height 0.15s ease-out 0.15s;
-}
-.headerButton a > span > span > span:after{
-    color:black;
-    content: attr(data-attr-span);
-    width: 0%;
-    height: 100%;
-    background: crimson;
-    white-space: nowrap;
-    text-align: center;
-    margin: auto;
-    display: flex;
-    justify-content: center;
-    transition: width 0.2s;
-}
-.headerButton a:hover > span > span > span:after{
-    transition: 300ms;
-    width: 100%;
-    color: white;
-}
+    /*right*/
+    #header > nav{
+        width: 800px;
+    }
+    #header > nav > ul{
+        list-style-type: none; 
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+    #header > nav li{
+        width: 100px;
+    }
+    #header > nav a{
+        text-decoration: none;
+        color: black;
+        font-size: 20px;
+        font-family: Roboto-Light;
+    }
+    .headerButton a{
+        text-align: center;
+        position: relative;
+        width: 250px;
+        height: 50px;
+        font-size: 20px;
+        outline: none;
+    }
+    .headerButton a:hover span{
+        transition: 1000ms;
+        text-shadow: #f0f0f065 2px 2px 14px;
+    }
+    .headerButton a span{
+        display: block;
+        position: relative;
+        line-height: 50px;
+        height: 50px;
+        cursor: pointer;
+        text-shadow: #f0f0f069 2px 2px 8px;
+    }
+    .headerButton a > span:after{
+        content:'';
+        position: absolute;
+        top: 0;
+        width: 30px;
+        height: 0;
+        border: 3px solid #ffa437;
+        border-left: none;
+        border-bottom: none;
+        transition: height 0.15s ease-out, width 0.15s ease-out 0.15s;
+    }
+    .headerButton a:hover > span:after{
+        width: calc(50% - 1px);
+        height: calc(100% - 2px);
+        transition: width 0.15s ease-out, height 0.15s ease-out 0.15s;
+        border-color: #f0f0f0b4;
+    }
+    .headerButton a > span:before{
+        content:'';
+        position: absolute;
+        right: 50%;
+        width: 30px;
+        height: 0;
+        border: 3px solid #ffa437;
+        border-right: none;
+        border-bottom: none;
+        transition: height 0.15s ease-out, width 0.15s ease-out 0.15s;
+    }
+    .headerButton a:hover > span:before{
+        width: calc(50% - 1px);
+        height: calc(100% - 2px);
+        transition: width 0.15s ease-out, height 0.15s ease-out 0.15s;
+        border-color: #f0f0f0b4;
+    }
+    .headerButton a > span > span > span:after{
+        color:#ffa437;
+        font-weight: 600;
+        content: attr(data-attr-span);
+        width: 0%;
+        height: 100%;
+        white-space: nowrap;
+        text-align: center;
+        margin: auto;
+        display: flex;
+        justify-content: center;
+        transition: width 0.2s;
+    }
+    .headerButton a:hover > span > span > span:after{
+        transition: 300ms;
+        width: 100%;
+        color: #f0f0f0b4;
+    }
 
 /* --- Content Index --- */
 
-#alternanceAnnouncement{
-    height: 120px;
-    background-color: rgb(220, 20, 60);
-    position: absolute;
-    left: 0;
-    margin-top: -20px;
-}
-#alternanceAnnouncement h4{
-    margin-left: 30px;
-    position: relative;
-    top: 50%;
-    transform: translateY(-50%);
-    color: white;
-    font-weight: 500;
-}
-#alternanceAnnouncement div{
-    position: absolute;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    right: 10%;
-    top: 0;
-    background-color: tomato;
-    width: 300px;
-}
-#alternanceAnnouncement p{
-    color: white;
-    font-weight: 500;
-    margin-top: 15px;
-}
-#alternanceAnnouncement form{
-    font-weight: 100;
-    width: 150px;
-    height: 50px;
-    border: 0;
-    animation-name: goAlternanceAnimationForm;
-    animation-duration: 2s;
-    animation-iteration-count: infinite;
-    border-radius: 10px;
-    overflow: hidden;
-}
-#alternanceAnnouncement button{
-    animation-name: goAlternanceAnimationButton;
-    animation-duration: 2s;
-    animation-iteration-count: infinite;
-    color: seashell;
-}
-#alternanceAnnouncement button:hover{
-    background-color: rgba(65, 105, 225, 0.692) !important;
-}
+    #indexAccueil{
+        width: 100vw;
+        height: 100vh;
+        background-color: #19c3d4;
+        text-align: center;
+        box-shadow: #19c3d4 0 5px 5px;
+    }
+    #indexAccueil #gifIndex{
+        width: 50%;
+        margin: auto;
+    }
+    #indexAccueil #arrow{
+        width: 40px;
+        transform : rotate(90deg);
+        position: absolute;
+        top: 80vh;
+        z-index: 1;
+        animation-duration: 2s;
+        animation-name: arrowAnimation;
+        animation-iteration-count: infinite;
+    }
+    @keyframes arrowAnimation{
+        0% { top: 80vh; }
+        50% { top: 85vh; }
+        100% { top: 80vh; }
+    }
 
 /* --- Content About Me --- */
 
-#content > #personalText{
-    width: 65%;
-    display: inline-block;
-    color: white;
-    background-color: rgba(0, 0, 0, 0.5);
-    padding: 4%;
-}
-#content > #personalImg{
-    display: inline-block;
-    width: 30%;
-    position: absolute;
-    right: 5%;
-    clip-path: ellipse(100% 100% at 0% 0%);
-}
-#personalImg > img{
-    filter: grayscale(40%);
-}
+    #content > #aboutMe{
+        position: relative;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+    }
 
-/* --- Contact Me --- */
-
-#contactHeader{
-    text-align: center;
-    border: black 1px solid;
-    display: flex;
-    flex-direction: column;
-    height: 100px;
-    justify-content: space-evenly;
-}
-#contactGrid{
-    display: flex;
-	grid-template-columns: repeat(auto-fill, 300px);
-	grid-gap: 10px;
-	justify-content: center;
-}
-.contactWay{
-    width: 300px;
-	height: 200px;
-	background-color: #333;
-}
-.contactWay:hover{
-    transition: 100ms;
-    background-color: tomato;
-}
-.contactWay p{
-    color: white;
-    text-align: center;
-    position: relative;
-    transform: translateY(-50%);
-    top: 50%;
-    user-select: none; /* Propriété standard */
-}
-.contactWay:hover p{
-    color: black;
-}
-.contactWay a{
-    color: white;
-}
-.contactWay a:hover{
-    color: black;
-}
+    #aboutMe > #personalText{
+        width: 65%;
+        display: inline-block;
+        color: white;
+        padding: 4%;
+    }
+    #aboutMe > #personalImg{
+        display: inline-block;
+        width: 28%;
+        height: 100%;
+        position: absolute;
+        right: 5%;
+        clip-path: ellipse(100% 100% at 0% 0%);
+    }
+    #personalImg > img{
+        filter: grayscale(40%);
+        width: 100%;
+        height: 99%;
+    }
 
 /* --- My works --- */
 
-#content > #projectsGrid{
+#myWork{
+    width: 100%;
+    position: relative;
+}
+
+#losangeLeft {
+    top: 25%;
+    left: -10%;
+    transform: translateY(-50%);
+    width  : 0;
+    height : 0;
+    border : 150px solid transparent;
+    border-bottom : 200px solid #ffa437;
+    position: absolute;
+}
+#losangeLeft:after {
+    width  : 0;
+    height : 0;
+    content : '';
+    position : absolute;
+    transform: translateX(-50%);
+    top  : 200px;
+    border : 150px solid transparent;
+    border-top : 200px solid #ffa437;
+}
+#losangeRight {
+    top: 25%;
+    right: -10%;
+    transform: translateY(-50%);
+    width  : 0;
+    height : 0;
+    border : 150px solid transparent;
+    border-bottom : 200px solid #ffa437;
+    position: absolute;
+}
+#losangeRight:after {
+    width  : 0;
+    height : 0;
+    content : '';
+    position : absolute;
+    transform: translateX(-50%);
+    top  : 200px;
+    border : 150px solid transparent;
+    border-top : 200px solid #ffa437;
+}
+
+#projectsGrid{
+    margin-top: 20px;
     display: grid;
 	grid-template-columns: repeat(auto-fill, 300px);
-	grid-gap: 5px;
+	grid-gap: 10px;
 	justify-content: center;
 }
 .project{
@@ -291,13 +291,72 @@ body{
     width: 100%;
 }
 
+/* --- Contact Me --- */
+
+#contact{
+    margin-top: 50px;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+#contactHeader{
+    margin-top: 20px;
+    color: #ffa437;
+    text-align: center;
+    border-top: solid 2px #ffa537a3;
+    border-bottom: solid 2px #ffa537a3;
+    display: flex;
+    flex-direction: column;
+    height: 100px;
+    justify-content: space-evenly;
+}
+
+#contactGrid{
+    margin-top: 100px;
+    display: flex;
+	grid-template-columns: repeat(auto-fill, 300px);
+	grid-gap: 10px;
+	justify-content: center;
+}
+.contactWay{
+    width: 300px;
+	height: 200px;
+    border: solid #ffa437;
+}
+.contactWay:hover{
+    transition: 100ms;
+    background-color: #ffa437;
+    border-color: rgba(255, 255, 255, 0.293);
+}
+.contactWay p{
+    color: white;
+    text-align: center;
+    position: relative;
+    transform: translateY(-50%);
+    top: 50%;
+}
+.contactWay:hover p{
+    color: black;
+}
+.contactWay a{
+    color: white;
+    text-decoration: none;
+}
+.contactWay:hover a{
+    color: black;
+}
+#content iframe{
+    margin-top: 100px;
+    width: 100%;
+    box-shadow: #ffa437 0 0 15px;
+}
+
 /* --- Footers --- */
 
 footer{
     background-color: rgba(0, 0, 0, 0.5);
     height: 100px;
     width: 100%;
-    margin-top: 110px;
 }
 footer > p{
     color: white;
@@ -315,29 +374,4 @@ footer > p{
 @font-face {
 	font-family: Roboto-Light;
 	src: url('../fonts/Roboto-Light.ttf');
-}
-/*Animations keyframes*/
-@keyframes goAlternanceAnimationForm{
-    from{
-        margin-top: 0;
-        width: 150px;
-        height: 50px;
-    } 50% {
-        margin-top: -2px;
-        width: 160px;
-        height: 51px;
-    } to {
-        margin-top: 0;
-        width: 150px;
-        height: 50px;
-    }
-}
-@keyframes goAlternanceAnimationButton{
-    from{
-        background-color: teal;
-    } 50% {
-        background-color: rgb(73, 141, 141);
-    } to {
-        background-color: teal;
-    }
 }

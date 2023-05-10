@@ -2,21 +2,103 @@
 
 {% block body %}
     <main>
-        <div id="content">
-            <!--Alternance annonce-->
-            <div id="alternanceAnnouncement" class="w-100">
-                <h4>Je suis actellement à la recherche d'une alternance !</h4>
-                <div class="h-100">
-                    <p>Vous recherchez un apprenti ?</p>
-                    <form action="contact.html">
-                        <button class="w-100 h-100 border-0">Contactez moi !</button>
-                    </form>
-                </div>
-            </div>
-            <!--Image de decoration-->
-            <div class="m-auto w-50">
-                <img src="{{ asset("img/working.gif") }}">
+
+        <!-- Index Accueil -->
+
+        <div id="indexAccueil">
+            <img src="{{ asset("img/working.gif") }}" id="gifIndex">
+            <div>
+                <a href="#content">
+                    <img src="{{ asset("img/left-arrow.png") }}" id="arrow">
+                </a>
             </div>
         </div>
+
+        <div id="content">
+
+            <!--Texte de présentation-->
+            <div id="aboutMe">
+                <div id="personalText">
+                    <h5>
+                        Je m’appelle Corentin Dufeu, je suis actuellement en fin de première année du Bachelor Switch IT, 
+                        à l’école de Campus Academy Rennes.
+                        <br><br>
+                        Depuis environ un an, j'étudie plusieurs langages de programmation telle que le PHP ou le Python.
+                        J'adore passer du temps à développer différents programmes, ce qui me permet de progresser plus 
+                        rapidement.
+                        <br><br>
+                        En plus de coder, j'aime passer du temps à jouer aux jeux vidéo, comme Red Dead Redemption 2 ou Assassin Screed Odyssey.
+                        Je réalise aussi du tennis de table depuis 10 ans, au club d'Argentré du Plessis.
+                        <br><br>
+                        Mon objectif, est de travailler en alternance dans un milieu professionnel, dans le but de progresser plus rapidement, et de devenir développeur à plein temps dans deux ans.
+                    </h5>
+                    <a href="CV.pdf" target="_BLANK">Accéder à mon CV</a>
+                </div>
+                <!--Photo CV-->
+                <div id="personalImg">
+                    <img class="w-100" src="{{ asset("img/personal_image.png") }}">
+                </div>
+            </div>
+
+            <!--Les projets-->
+            <div id="myWork">
+                <div id="losangeLeft"></div>
+                <div id="losangeRight"></div>
+                <div id="projectsGrid">
+                    <a class="project" href="{{ path("work") }}">
+                        <div>
+                            <div class="shutterProject w-100 h-100 d-flex justify-content-center align-items-center flex-column">
+                                <h6>Projet Carnet de contact (java)</h6>
+                                <img src="{{ asset("img/find_icon.png") }}">
+                            </div>
+                        </div>
+                        <img src="{{ asset("img/work_atelier2.png") }}">
+                    </a>
+                    <a class="project" href="{{ path("work2") }}">
+                        <div>
+                            <div class="shutterProject w-100 h-100 d-flex justify-content-center align-items-center flex-column">
+                                <h6>Projet Téléchargement Mp3 (PHP)</h6>
+                                <img src="{{ asset("img/find_icon.png") }}">
+                            </div>
+                        </div>
+                        <img src="{{ asset("img/work_mp3Download.png") }}" class="h-100">
+                    </a>
+                    {% for i in 0..9 %}
+                        <a class="project">
+                            <div>
+                                <div class="shutterProject w-100 h-100 d-flex justify-content-center align-items-center flex-column">
+                                    <h6>Exemple projet</h6>
+                                    <img src="{{ asset("img/find_icon.png") }}">
+                                </div>
+                            </div>
+                            <img src="{{ asset("img/exemple_work.png") }}" class="w-100">
+                        </a>
+                    {% endfor %}
+                </div>
+            </div>
+
+            <!--Contact-->
+            <div id="contact">
+                <!--Titre de page-->
+                <div id="contactHeader" class="mb-5">
+                    <h2>Me contacter</h2>
+                    <h5>Si vous voulez me contacter, plusieurs choix s'offrent à vous.</h5>
+                </div>
+                <!--Cases moyens de contact-->
+                <div id="contactGrid">
+                    <div class="contactWay">
+                        <p><a href="mailto:corentindufeu1@gmail.com">Adresse email : <br> corentin.dufeu@hotmail.fr</a></p>
+                    </div>
+                    <div class="contactWay">
+                        <p><a href="tel:0640095449">Téléphone : <br> 0640095449</a></p>
+                    </div>
+                    <div class="contactWay">
+                        <p>Adresse :<br>9 rue de la Gare<br>35370 Argentré du Plessis</p>
+                    </div>
+                </div>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d184457.4928471702!2d-1.444786589942244!3d48.077313309041!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4808d81467c8ee9b%3A0xac4fa772207eecc5!2s35370%20Argentr%C3%A9-du-Plessis!5e0!3m2!1sfr!2sfr!4v1683599865268!5m2!1sfr!2sfr" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+        
     </main>
 {% endblock %}
